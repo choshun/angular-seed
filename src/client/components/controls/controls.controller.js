@@ -1,6 +1,11 @@
 class ControlsController {
-  constructor() {
+  constructor(controlsService) {
+  	this.controlsService = controlsService;
     this.name = 'Controller Component';
+  }
+
+  getServiceName() {
+  	return this.controlsService.getName();
   }
 }
 

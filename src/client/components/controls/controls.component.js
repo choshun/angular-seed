@@ -1,7 +1,7 @@
 import template from './controls.html';
 import controller from './controls.controller';
 
-let newComponent = {
+let controlsComponent = {
   restrict: 'E',
   scope: {},
   template: template,
@@ -9,4 +9,4 @@ let newComponent = {
   controllerAs: 'controls'
 };
 
-export default newComponent;
+export default controlsComponent;
