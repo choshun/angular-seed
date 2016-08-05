@@ -1,7 +1,7 @@
 {
   "name": "angular-seed",
   "version": "0.0.1",
-  "description": "angular 1.5 seed",
+  "description": "angular 1.5 seed inspired by https://github.com/kitconcept/webpack-starter-angular/",
   "main": "app.js",
   "respository": "https://github.com/choshun/angular-seed",
   "scripts": {
@@ -10,7 +10,8 @@
   },
   "license": "MIT",
   "keywords": [
-    "angular"
+    "angular",
+    "seed"
   ],
   "author": "Choshun Snyder",
   "babel": {
