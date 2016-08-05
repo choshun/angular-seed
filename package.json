@@ -1,0 +1,40 @@
+{
+  "name": "angular-seed",
+  "version": "0.0.1",
+  "description": "angular 1.5 seed",
+  "main": "app.js",
+  "respository": "https://github.com/choshun/angular-seed",
+  "scripts": {
+    "start": "node src/server/index.js",
+    "watch": "webpack --config config/webpack.js --watch"
+  },
+  "license": "MIT",
+  "keywords": [
+    "angular"
+  ],
+  "author": "Choshun Snyder",
+  "babel": {
+    "presets": [
+      "es2015"
+    ]
+  },
+  "devDependencies": {
+    "babel-core": "^6.3.26",
+    "babel-loader": "^6.1.0",
+    "babel-polyfill": "^6.3.14",
+    "babel-preset-es2015": "^6.1.18",
+    "css-loader": "^0.21.0",
+    "html-webpack-plugin": "^1.7.0",
+    "node-sass": "^3.3.3",
+    "raw-loader": "^0.5.1",
+    "sass-loader": "^3.0.0",
+    "script-loader": "^0.6.1",
+    "style-loader": "^0.13.0",
+    "webpack": "~1.12.14"
+  },
+  "dependencies": {
+    "angular": "1.5.7",
+    "lodash": "4.6.1",
+    "express": "^4.12.3"
+  }
+}
