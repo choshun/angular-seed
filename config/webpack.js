@@ -1,17 +1,17 @@
-const path = require('path');
-const webpack = require('webpack');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
+var path = require('path');
+var webpack = require('webpack');
+var HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-  entry: './src/app.js',
+  entry: path.resolve(__dirname, '../src/client/app.js'),
   output: {
-    path: path.join(__dirname, '..', 'dist'),
+    path: path.resolve(__dirname, '../dist'),
     filename: 'bundle.js'
   },
   plugins: [
     new HtmlWebpackPlugin({
-      title: 'Webpack Starter Angular - kitconcept',
-      template: 'src/index.html',
+      title: 'Webpack Angular 1.5 Seed - inspired from kitconcept https://github.com/kitconcept/webpack-starter-angular/',
+      template: path.resolve(__dirname, '../src/client/index.html'),
       minify: {
         collapseWhitespace: true,
         removeComments: true,
