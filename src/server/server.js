@@ -1,8 +1,7 @@
 import path from 'path';
 import Express from 'express';
 
-var app = Express();
-var server;
+const app = Express();
 
 const PATH_STYLES = path.resolve(__dirname, '../client/styles');
 const IMAGE_PATHS = path.resolve(__dirname, '../client/images');
@@ -16,7 +15,7 @@ app.get('/', (req, res) => {
   res.sendFile(path.resolve(__dirname, '../client/index.html'));
 });
 
-server = app.listen(process.env.PORT || 2016, () => {
+const server = app.listen(process.env.PORT || 2016, () => {
   var port = server.address().port;
 
   console.log('Server is listening at %s', port);
