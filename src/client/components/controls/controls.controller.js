@@ -7,6 +7,12 @@ class ControlsController {
   getServiceName() {
   	return this.controlsService.getName();
   }
+
+  setView(view) {
+    console.log('view!!', view);
+	  this.view = view;
+	  this.onViewChange({$event: { view }});
+	}
 }
 
 export default ControlsController;

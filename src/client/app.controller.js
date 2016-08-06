@@ -1,6 +1,6 @@
 class AppController {
   constructor(targetService) {
-    this.view = 'poopy pants'
+    this.view = 'pants'
   }
 
   modifyView(view) {

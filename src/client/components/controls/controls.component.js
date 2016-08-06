@@ -6,7 +6,11 @@ let controlsComponent = {
   scope: {},
   template: template,
   controller: controller,
-  controllerAs: 'controls'
+  controllerAs: 'controls',
+  bindings: {
+    view: '<',
+    onViewChange: '&'
+  }
 };
 
 export default controlsComponent;
