@@ -1,6 +1,13 @@
 <!-- Place all UI elements intended to be present across all routes in this file -->
+
+<!-- TODO: put template/controller into component, too many files
+Do component to component input/output stuff:
+http://dfsq.info/site/read/angular-components-communication
+ -->
 <div class="app">
   hey there
-  <controls>controls</controls>
-  <!-- <graph>graph</graph> -->
+  <!-- <controls view="root.view" on-view-change="root.view = $event.view">controls</controls> -->
+
+  <controls view="root.view" on-view-change="root.modifyView($event.view)">controls</controls>
+  <target view=root.view>graph</target>
 </div>
