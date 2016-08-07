@@ -1,13 +1,15 @@
 <!-- Place all UI elements intended to be present across all routes in this file -->
 
-<!-- TODO: put template/controller into component, too many files
-Do component to component input/output stuff:
-http://dfsq.info/site/read/angular-components-communication
+<!-- 
+Make controls component have a field that drives the name.
+Make controls component use the form stuff from example.
+Make controls component have multiple forms that drive the query.
+Make controls component drive multiple destinations in target.
  -->
-<div class="app">
+<section class="app">
   hey there
   <!-- <controls view="root.view" on-view-change="root.view = $event.view">controls</controls> -->
 
-  <controls view="root.view" on-view-change="root.modifyView($event.view)">controls</controls>
-  <target view=root.view>graph</target>
-</div>
+  <controls view="rootCtrl.view" on-view-change="rootCtrl.modifyView($event.view)">controls</controls>
+  <target view=rootCtrl.view>graph</target>
+</section>
