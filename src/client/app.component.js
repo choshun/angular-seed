@@ -6,7 +6,7 @@ let appComponent = () => {
     template,
     restrict: 'E',
     controller,
-    controllerAs: 'root'
+    controllerAs: 'rootCtrl'
   };
 };
 

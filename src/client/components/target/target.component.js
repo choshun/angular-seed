@@ -5,7 +5,7 @@ let targetComponent = {
   restrict: 'E',
   template,
   controller,
-  controllerAs: 'target',
+  controllerAs: 'targetCtrl',
   bindings: {
     view: '<'
   }

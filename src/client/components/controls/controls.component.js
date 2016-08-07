@@ -6,7 +6,7 @@ let controlsComponent = {
   scope: {},
   template: template,
   controller: controller,
-  controllerAs: 'controls',
+  controllerAs: 'controlsCtrl',
   bindings: {
     view: '<',
     onViewChange: '&'
