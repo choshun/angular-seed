@@ -16,7 +16,7 @@ app.get('/', (req, res) => {
 });
 
 const server = app.listen(process.env.PORT || 2016, () => {
-  var port = server.address().port;
+  const port = server.address().port;
 
   console.log('Server is listening at %s', port);
 });
