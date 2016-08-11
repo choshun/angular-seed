@@ -8,12 +8,14 @@ class ControlsService {
     return this.name;
   }
 
-  getItems(githubUsername) {
+  getItems(githubUsername, type) {
+    console.log(type, githubUrl + '/users/' +
+      githubUsername + '?callback=JSON_CALLBACK&status=' + type);
     const githubUrl = 'https://api.github.com';
     return this.$http({
       method: 'JSONP',
       url: githubUrl + '/users/' +
-      githubUsername + '?callback=JSON_CALLBACK'
+      githubUsername + '?callback=JSON_CALLBACK&status=' + type
     }).success(function(data) {
       // this callback will be called asynchronously
       // when the response is available
