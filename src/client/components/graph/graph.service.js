@@ -24,28 +24,30 @@ class TargetService {
   }
 
   setChartParameters(rawSvg, data) {
-    this.xScale = D3.scaleLinear()
+    this.xScale = D3.scale.linear()
       .domain([data[0].hour, data[data.length - 1].hour])
       .range([this.padding + 5, rawSvg.clientWidth - this.padding]);
 
-    this.yScale = D3.scaleLinear()
-      .domain([0, D3.max(data, function (d) {
+    this.yScale = D3.scale.linear()
+      .domain([0, d3.max(data, function (d) {
         return d.sales;
       })])
-    .range([rawSvg.clientHeight - this.padding, 0]);
+      .range([rawSvg.clientHeight - this.padding, 0]);
 
-    this.xAxisGen = D3.axisBottom()
+    this.xAxisGen = D3.svg.axis()
       .scale(this.xScale)
+      .orient("bottom")
       .ticks(data.length - 1);
 
-    this.yAxisGen = D3.axisLeft()
+    this.yAxisGen = D3.svg.axis()
       .scale(this.yScale)
+      .orient("left")
       .ticks(5);
 
-    this.lineFun = D3.line()
+    this.lineFun = D3.svg.line()
       .x((d) => this.xScale(d.hour))
       .y((d) => this.yScale(d.sales))
-      .curve(D3.curveCatmullRom.alpha(0.5));
+      .interpolate("basis");
   }
 
   drawLineChart(rawSvg, data) {
