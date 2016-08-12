@@ -1,11 +1,10 @@
 class AppController {
   constructor(targetService) {
-    this.view = 'onions'
+    this.data = 'onions'
   }
 
-  modifyView(view) {
-    this.view = view + 'modified';
-    console.log('booop! (hopefully where I refire d3)');
+  modifyData(data) {
+    this.data = data + ' modified';
   }
 }
 

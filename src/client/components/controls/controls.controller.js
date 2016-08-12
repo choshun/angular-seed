@@ -27,11 +27,11 @@ class ControlsController {
     }, this.timeoutTime);
   }
 
-  setView(view) {
-    console.log('view!!', view);
-    this.view = view;
-    this.onViewChange({
-      $event: { view }
+  setView(data) {
+    console.log('data!!', data);
+    this.data = data;
+    this.onDataChange({
+      $event: { data }
     });
   }
 }

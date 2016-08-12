@@ -8,8 +8,8 @@ let controlsComponent = {
   controller: controller,
   controllerAs: 'controlsCtrl',
   bindings: {
-    view: '<',
-    onViewChange: '&'
+    data: '<',
+    onDataChange: '&'
   }
 };
 

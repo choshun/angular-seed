@@ -7,7 +7,7 @@ let targetComponent = {
   controller,
   controllerAs: 'targetCtrl',
   bindings: {
-    view: '<'
+    data: '<'
   }
 };
 
