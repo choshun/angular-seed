@@ -11,12 +11,8 @@ https://github.com/kitconcept/webpack-starter-angular/
 Component parent to child state propagation. Supposedly should be easy to switch to Angular 2's flux architecture:
 http://dfsq.info/site/read/angular-components-communication
 
-Ideally in the component tags in app.html you should see all the parameters the component needs. In the component definition these should mostly be bound one way in bindings ('<'). So-called 'input'.
+Ideally in the component tags in app.html you should see all the parameters the component needs. In the component definition these should be bound with one way bindings '<' (called 'input').
 
-TODO: how does onViewChange: '&' work exactly? kinda confusing. This is how 'output' works.
+When using one-way binding $onchanges fires when data is changed, especially useful with async propagation.
 
-TODO:
-- Make controls component have a field that drives the name.
-- Make controls component use the form stuff from example.
-- Make controls component have multiple forms that drive the query.
-- Make controls component drive multiple destinations in target.
+You can propagate data up to root control with binding &, that attribute will point to a root controller method with scope of the child ('output').
