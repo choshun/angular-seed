@@ -28,14 +28,14 @@ class ControlsController {
   // }
 
   getDetails() {
-    this.setView(JSON.stringify(this.controlsService.getItems(), 0, 4));
+    this.setView(this.controlsService.getItems());
   }
 
   setView(data) {
-    console.log('data!!', data);
+    // console.log('data!!', data);
     this.data = data;
     this.onDataChange({
-      $event: { data }
+      $event: { data: this.data }
     });
   }
 }
