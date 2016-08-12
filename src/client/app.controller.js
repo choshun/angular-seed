@@ -4,7 +4,7 @@ class AppController {
   }
 
   modifyData(data) {
-    this.data = data + ' modified';
+    this.data = data;
   }
 }
 
