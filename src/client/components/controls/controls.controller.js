@@ -13,18 +13,22 @@ class ControlsController {
     return this.controlsService.getName();
   }
 
+  // getDetails() {
+  //   clearTimeout(this.timeout);
+
+  //   this.timeout = setTimeout(() => {
+  //     this.controlsService.getItems(this.githubUsername, this.type).then((res) => {
+  //         this.result = res.data;
+  //         console.log('result?', this.result);
+  //         console.log(this.result);
+
+  //         this.setView(this.result.data.id);
+  //       });
+  //   }, this.timeoutTime);
+  // }
+
   getDetails() {
-    clearTimeout(this.timeout);
-
-    this.timeout = setTimeout(() => {
-      this.controlsService.getItems(this.githubUsername, this.type).then((res) => {
-          this.result = res.data;
-          console.log('result?', this.result);
-          console.log(this.result);
-
-          this.setView(this.result.data.id);
-        });
-    }, this.timeoutTime);
+    this.setView(JSON.stringify(this.controlsService.getItems(), 0, 4));
   }
 
   setView(data) {
