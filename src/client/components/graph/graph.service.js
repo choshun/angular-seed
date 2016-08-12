@@ -1,6 +1,6 @@
 class TargetService {
   constructor() {
-    this.name = 'target service';
+    this.name = 'graph service';
   }
 
   getName() {

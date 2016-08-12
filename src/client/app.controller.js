@@ -1,5 +1,5 @@
 class AppController {
-  constructor(targetService) {
+  constructor(graphService) {
     this.data = 'onions'
   }
 
